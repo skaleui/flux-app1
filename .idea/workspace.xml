@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b938abd-5c65-4b9b-af8c-bf289043622e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/http/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/message-board.js" afterPath="$PROJECT_DIR$/src/message-board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="flux-app1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,22 +48,23 @@
       <file leaf-file-name="message-board.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/message-board.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            <state relative-caret-position="722">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
-                <marker date="1531194814000" expanded="true" signature="1735:1745" ph="..." />
-                <marker date="1531194814000" expanded="true" signature="1735:1767" ph="..." />
-                <marker date="1531194814000" expanded="true" signature="1735:1797" ph="..." />
+                <element signature="e#0#70#0" expanded="true" />
+                <marker date="1531196922000" expanded="true" signature="2313:2323" ph="..." />
+                <marker date="1531196922000" expanded="true" signature="2313:2345" ph="..." />
+                <marker date="1531196922000" expanded="true" signature="2313:2375" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tasks.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/http/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/flux/Store.js" />
         <option value="$PROJECT_DIR$/src/control-panel.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/http/index.js" />
         <option value="$PROJECT_DIR$/src/message-board.js" />
       </list>
     </option>
@@ -164,7 +165,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1770" />
     <option name="y" value="53" />
-    <option name="width" value="1559" />
+    <option name="width" value="1741" />
     <option name="height" value="972" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -221,6 +222,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flux-app1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flux-app1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,18 +345,18 @@
       <workItem from="1530312125503" duration="173000" />
       <workItem from="1530312632821" duration="618000" />
       <workItem from="1530377621559" duration="11601000" />
-      <workItem from="1531185696941" duration="2820000" />
+      <workItem from="1531185696941" duration="4921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16644000" />
+    <option name="totallyTimeSpent" value="18745000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1770" y="53" width="1559" height="972" extended-state="0" />
+    <frame x="1770" y="53" width="1741" height="972" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24951892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -385,9 +404,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1531194814000" expanded="true" signature="1735:1745" ph="..." />
-            <marker date="1531194814000" expanded="true" signature="1735:1767" ph="..." />
-            <marker date="1531194814000" expanded="true" signature="1735:1797" ph="..." />
+            <element signature="e#0#70#0" expanded="true" />
+            <marker date="1531196922000" expanded="true" signature="2313:2323" ph="..." />
+            <marker date="1531196922000" expanded="true" signature="2313:2345" ph="..." />
+            <marker date="1531196922000" expanded="true" signature="2313:2375" ph="..." />
           </folding>
         </state>
       </provider>
@@ -551,14 +571,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/http/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/message-board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        <state relative-caret-position="722">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
-            <marker date="1531194814000" expanded="true" signature="1735:1745" ph="..." />
-            <marker date="1531194814000" expanded="true" signature="1735:1767" ph="..." />
-            <marker date="1531194814000" expanded="true" signature="1735:1797" ph="..." />
+            <element signature="e#0#70#0" expanded="true" />
+            <marker date="1531196922000" expanded="true" signature="2313:2323" ph="..." />
+            <marker date="1531196922000" expanded="true" signature="2313:2345" ph="..." />
+            <marker date="1531196922000" expanded="true" signature="2313:2375" ph="..." />
           </folding>
         </state>
       </provider>

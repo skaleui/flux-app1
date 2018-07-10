@@ -1,4 +1,7 @@
-import{ createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { get } from './http';
+import logger from 'redux-logger';
+
 
 export const ONLINE = 'ONLINE';
 export const AWAY = 'AWAY';
@@ -8,6 +11,10 @@ export const OFFLINE = 'OFFLINE';
 export const UPDATE_STATUS = 'UPDATE_STATUS';
 
 export const CREATE_NEW_MESSAGE = 'CREATE_NEW_MESSAGE';
+
+export const READY = 'READY';
+export const WAITING = 'WAITING';
+export const NEW_MESSAGE_SERVER_ACCEPTED = 'NEW_MESSAGE_SERVER_ACCEPTED';
 
 const defaultState= {
   messages: [
@@ -28,7 +35,8 @@ const defaultState= {
     },
 
   ],
-  userStatus: ONLINE
+  userStatus: ONLINE,
+  apiCommunicationStatus: READY
 }
 
 
@@ -37,6 +45,16 @@ const userStatusReducer = (state = defaultState.userStatus, {type, value}) => {
     case UPDATE_STATUS:
       return value;
       break;
+  }
+  return state;
+}
+
+const apiCommunicationStatusReducer = (state = READY, {type}) => {
+  switch(type) {
+    case CREATE_NEW_MESSAGE:
+      return WAITING;
+    case NEW_MESSAGE_SERVER_ACCEPTED:
+      return READY;
   }
   return state;
 }
@@ -52,10 +70,11 @@ const messageReducer = (state = defaultState.messages, {type, value, postedBy, d
 
 const combinedReducer = combineReducers({
   userStatus: userStatusReducer,
-  messages: messageReducer
+  messages: messageReducer,
+  apiCommunucationStatus: apiCommunicationStatusReducer
 });
 
-const Store = createStore(combinedReducer);
+const Store = createStore(combinedReducer, applyMiddleware(logger));
 
 
 document.forms.newMessage.addEventListener('submit', (e)=> {
@@ -66,7 +85,7 @@ document.forms.newMessage.addEventListener('submit', (e)=> {
 })
 
 const render = () => {
-  const { messages, userStatus } = Store.getState();
+  const { messages, userStatus, apiCommunicationStatus } = Store.getState();
   document.getElementById('messages').innerHTML = messages
     .sort((a, b)=>b.date - a.date)
     .map(message=>(`
@@ -75,7 +94,7 @@ const render = () => {
       </div>
       `)).join("");
 
-  document.forms.newMessage.fields.disabled = (userStatus === OFFLINE);
+  document.forms.newMessage.fields.disabled = (userStatus === OFFLINE) || (apiCommunicationStatus === WAITING);
   document.forms.newMessage.newMessage.value = "";
 
 }
@@ -91,6 +110,13 @@ const statusUpdateAction = (value) => {
 
 const newMessageAction = (content, postedBy) => {
   const date = new Date();
+
+  get('/api/create', (id)=>{
+    Store.dispatch({
+      type: NEW_MESSAGE_SERVER_ACCEPTED
+    })
+  });
+
   return {
     type: CREATE_NEW_MESSAGE,
     value: content,
@@ -106,3 +132,9 @@ document.forms.selectStatus.status.addEventListener('change', (e)=>{
 render();
 
 Store.subscribe(render);
+
+
+console.log('Making request');
+get('http://pluralsight.com', (id)=> {
+  console.log("received callback", id);
+});
