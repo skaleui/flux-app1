@@ -23,7 +23,7 @@ module.exports = {
 
   entry: {
     cpanel: ["./src/control-panel.js"],
-    "message-board": ["./src/message-board"],
+    "message-board": ["./src/message-board.js"],
     tasks: ["./src/tasks.js"]
   },
 
